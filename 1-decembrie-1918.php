@@ -4,7 +4,7 @@
  *  Plugin URI: http://wordpress.org/extend/plugins/1-decembrie-1918/
  *  Description: 1 Decembrie 1918 - Ziua cea mare a tuturor romanilor!
  *  Author: Marius OLAR
- *  Version: 1.dec.2010
+ *  Version: 1.dec.2012
  *  Author URI: http://olarmarius.tk/
  *  License: GPLv3
  *
