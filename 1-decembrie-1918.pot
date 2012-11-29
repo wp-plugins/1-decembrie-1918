@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: 1 Decembrie 1918\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-11-29 02:33+0200\n"
+"PO-Revision-Date: 2012-11-29 02:33+0200\n"
+"Last-Translator: Marius-Alex OLAR\n"
+"Language-Team: Marius OLAR <http://olarmarius.tk/>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: Romanian\n"
+"X-Poedit-Country: ROMANIA\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 1-decembrie-1918.php:63
+#: 1-decembrie-1918.php:67
+msgid "Message"
+msgstr ""
+
+#: 1-decembrie-1918.php:63
+msgid "Saved options"
+msgstr ""
+
+#: 1-decembrie-1918.php:67
+msgid "Error saving options"
+msgstr ""
+
+#: 1-decembrie-1918.php:77
+#: 1-decembrie-1918.php:103
+msgid "Settings"
+msgstr ""
+
+#: 1-decembrie-1918.php:85
+msgid "URL"
+msgstr ""
+
+#: 1-decembrie-1918.php:91
+msgid "Save"
+msgstr ""
+
