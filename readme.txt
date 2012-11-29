@@ -4,7 +4,7 @@ Donate link: http://olarmarius.tk/
 Tags: ribbon, panglica, 1 decembrie, 1-decembrie-1918, 1 decembrie 1918, decembrie, december, december 1, december-1, olar, romania, national-day, ziua nationala a romaniei
 Requires at least: 3.0.1
 Tested up to: 3.4.2
-Stable tag: 1.dec.1918
+Stable tag: 1.dec.2010
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
