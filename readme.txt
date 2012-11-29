@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Activati acest plugin si veti avea in partea dreapta, sus, o panglica tricolora care va trimite catre pagina http://1decembrie.ro/. Daca doriti sa schimbati URL-ul atunci puteti face aste lucru in pagina de `Optiuni` a modulului.
+Activati acest plugin si veti avea in partea dreapta, sus, o panglica tricolora care va va trimite catre pagina http://1decembrie.ro/. Daca doriti sa schimbati URL-ul atunci puteti face acest lucru in pagina de `Optiuni` a modulului.
 
 
 == Installation ==
