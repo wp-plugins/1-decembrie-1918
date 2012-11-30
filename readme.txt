@@ -16,8 +16,11 @@ Activati acest plugin si veti avea in partea dreapta, sus, o panglica tricolora 
 
 Aveti de asemenea si optiuni precum:
 * modificare link imagine;
+
 * modificare title imagine;
+
 * afisare/ascundere efect de neon;
+
 * afisare/ascundere text;
 
 
