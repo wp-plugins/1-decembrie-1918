@@ -14,6 +14,12 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Activati acest plugin si veti avea in partea dreapta, sus, o panglica tricolora care va va trimite catre pagina http://1decembrie.ro/. Daca doriti sa schimbati URL-ul atunci puteti face acest lucru in pagina de `Optiuni` a modulului.
 
+Aveti de asemenea si optiuni precum:
+* modificare link imagine;
+* modificare title imagine;
+* afisare/ascundere efect de neon;
+* afisare/ascundere text;
+
 
 == Installation ==
 
