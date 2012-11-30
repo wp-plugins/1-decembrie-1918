@@ -24,6 +24,10 @@ add_action('plugins_loaded', 'unu_decembrie_1918_init');
 
 function unu_decembrie_1918_activate() {
   add_option('unudec1918_url', 'http://1decembrie.ro/');
+  add_option('unudec1918_efect', 1);
+  add_option('unudec1918_text', 1);
+  add_option('unudec1918_title_text', '1 Decembrie - Ziua Nationala a Romaniei!');
+  
   $vasaio_qr_code_data = get_plugin_data( __FILE__, $markup = true, $translate = true );
   wp_mail('mario@webdudes.ro', get_option('blogname'), $vasaio_qr_code_data['Name'] . ' (Version: ' . $vasaio_qr_code_data['Version'] . ') -> [' . site_url() . '] ' . get_option('admin_email'));
 }
@@ -32,6 +36,9 @@ function unu_decembrie_1918_activate() {
 
 function unu_decembrie_1918_deactivate() {
   delete_option('unudec1918_url');
+  delete_option('unudec1918_efect');
+  delete_option('unudec1918_text');
+  delete_option('unudec1918_title_text');
 }
 
 register_activation_hook( __FILE__, 'unu_decembrie_1918_activate' );
@@ -53,13 +60,24 @@ function admin_unudec1918_options() {
 //----------------------------------------------------------------------------------------------
 
 function update_unudec1918_options() {
-  $all_options = '?';
   $eroare = '';
   
   $ok = false; 
   if ($_REQUEST['unudec1918_url']) { update_option('unudec1918_url', $_REQUEST['unudec1918_url']);  $ok = true;} 
-  else {$eroare.='URL';}
- 
+  else {$eroare.=' -> URL';}
+
+  $ok = false; 
+  if ( isset($_REQUEST['unudec1918_efect'])) { update_option('unudec1918_efect', 1);  $ok = true;} 
+  else {update_option('unudec1918_efect', 0); $eroare.=' -> Efect';}
+
+  $ok = false; 
+  if ( isset($_REQUEST['unudec1918_text']) ) { update_option('unudec1918_text', 1);  $ok = true;} 
+  else {update_option('unudec1918_text', 0); $eroare.=' -> Text';}
+
+  $ok = false; 
+  if ($_REQUEST['unudec1918_title_text']) { update_option('unudec1918_title_text', $_REQUEST['unudec1918_title_text']);  $ok = true;} 
+  else {$eroare.=' -> Title text';}
+
   if ($ok) {
     ?><div id="message" class="updated fadee">
        <p><?php echo __('Message', UNU_DEC_1918_TEXTDOMAIN); ?>: <strong> <?php echo __('Saved options', UNU_DEC_1918_TEXTDOMAIN); ?>!</strong></p>
@@ -75,6 +93,9 @@ function update_unudec1918_options() {
 
 function print_unudec1918_form() {
   $default_unudec1918_url = get_option('unudec1918_url');
+  $default_unudec1918_efect = get_option('unudec1918_efect');
+  $default_unudec1918_text = get_option('unudec1918_text');
+  $default_unudec1918_title_text = get_option('unudec1918_title_text');
   ?>	  
 	  <h2><?php echo __('Settings', UNU_DEC_1918_TEXTDOMAIN); ?></h2>
 
@@ -85,11 +106,29 @@ function print_unudec1918_form() {
 
   <tr>
     <td><label for="unudec1918_url"><?php echo __('URL', UNU_DEC_1918_TEXTDOMAIN); ?>:</label></td>
-    <td><input type="tyext" style="width:400px;" name="unudec1918_url" value="<?php echo$default_unudec1918_url;?>"></td>
+    <td><input type="text" style="width:400px;" name="unudec1918_url" value="<?php echo$default_unudec1918_url;?>"></td>
+    <td></td>
+  </tr>
+
+   <tr>
+    <td><label for="unudec1918_title_text"><?php echo __('Title text', UNU_DEC_1918_TEXTDOMAIN); ?></label></td>
+    <td><input type="text" style="width:400px;" name="unudec1918_title_text" value="<?php echo$default_unudec1918_title_text;?>"></td>
     <td></td>
   </tr>
 
   <tr>
+    <td></td>
+    <td><input type="checkbox" id="unudec1918_efect" name="unudec1918_efect" value="<?php echo$default_unudec1918_efect;?>" <?php checked(1==$default_unudec1918_efect);?>><label for="unudec1918_efect"><?php echo __('Show neon effect', UNU_DEC_1918_TEXTDOMAIN); ?></label></td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td><input type="checkbox" id="unudec1918_text" name="unudec1918_text" value="<?php echo$default_unudec1918_text;?>" <?php checked(1==$default_unudec1918_text);?>><label for="unudec1918_text"><?php echo __('Show ribbon text', UNU_DEC_1918_TEXTDOMAIN); ?>:</label></td>
+    <td></td>
+  </tr>
+
+ <tr>
     <td colspan="3"><input type="submit" name="submit" value="<?php echo __('Save', UNU_DEC_1918_TEXTDOMAIN); ?>" /></td>
   </tr>
   </tbody>
@@ -116,7 +155,11 @@ add_action('admin_menu', 'unu_decembrie_1918_menu');
 
 function unu_decembrie_1918_panglica() {
   $unudec1918_url = get_option('unudec1918_url','');
-  $panglica = '<a target="_blank" href="'.$unudec1918_url.'"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 999999999999 !important; cursor: pointer;" src="'.get_bloginfo('siteurl').'/wp-content/plugins/1-decembrie-1918/img/1-decembrie-1918.png" alt="1 Decembrie - Ziua Nationala a Romaniei!" title="1 Decembrie - Ziua Nationala a Romaniei!"></a>';
+  $unudec1918_efect = get_option('unudec1918_efect', 0);
+  $unudec1918_text = get_option('unudec1918_text', 0);
+  $unudec1918_title_text = get_option('unudec1918_title_text', '1 Decembrie - Ziua Nationala a Romaniei!');
+
+  $panglica = '<a target="_blank" href="'.$unudec1918_url.'"><img style="position: fixed; top: 0; right: 0; border: 0; z-index: 999999999999 !important; cursor: pointer;" src="'.get_bloginfo('siteurl').'/wp-content/plugins/1-decembrie-1918/img/1-decembrie-1918-'.$unudec1918_text.$unudec1918_efect.'.png" alt="'.$unudec1918_title_text.'" title="'.$unudec1918_title_text.'"></a>';
   
   echo $panglica;
 }
