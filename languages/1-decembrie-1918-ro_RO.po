@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1 Decembrie 1918\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-29 02:33+0200\n"
-"PO-Revision-Date: 2012-11-29 02:33+0200\n"
+"POT-Creation-Date: 2012-11-30 04:41+0200\n"
+"PO-Revision-Date: 2012-11-30 04:42+0200\n"
 "Last-Translator: Marius-Alex OLAR\n"
 "Language-Team: Marius OLAR <http://olarmarius.tk/>\n"
 "MIME-Version: 1.0\n"
@@ -15,29 +15,43 @@ msgstr ""
 "X-Poedit-Country: ROMANIA\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../1-decembrie-1918.php:63
-#: ../1-decembrie-1918.php:67
+#: ../1-decembrie-1918.php:83
+#: ../1-decembrie-1918.php:87
 msgid "Message"
 msgstr "Mesaj"
 
-#: ../1-decembrie-1918.php:63
+#: ../1-decembrie-1918.php:83
 msgid "Saved options"
 msgstr "Opțiuni salvate"
 
-#: ../1-decembrie-1918.php:67
+#: ../1-decembrie-1918.php:87
 msgid "Error saving options"
 msgstr "Eroare la salvarea opțiunilor"
 
-#: ../1-decembrie-1918.php:77
-#: ../1-decembrie-1918.php:103
+#: ../1-decembrie-1918.php:100
+#: ../1-decembrie-1918.php:144
 msgid "Settings"
 msgstr "Opțiuni"
 
-#: ../1-decembrie-1918.php:85
+#: ../1-decembrie-1918.php:108
 msgid "URL"
 msgstr "URL"
 
-#: ../1-decembrie-1918.php:91
+#: ../1-decembrie-1918.php:114
+msgid "Title text"
+msgstr "Title text"
+
+#: ../1-decembrie-1918.php:121
+msgid "Show neon effect"
+msgstr "Afisare efect de neon"
+
+#: ../1-decembrie-1918.php:127
+msgid "Show ribbon text"
+msgstr "Afișează textul din panglică"
+
+#: ../1-decembrie-1918.php:132
 msgid "Save"
 msgstr "Salvează"
 
+#~ msgid "Afisare text"
+#~ msgstr "Afisare text"
