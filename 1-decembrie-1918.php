@@ -27,9 +27,6 @@ function unu_decembrie_1918_activate() {
   add_option('unudec1918_efect', 1);
   add_option('unudec1918_text', 1);
   add_option('unudec1918_title_text', '1 Decembrie - Ziua Nationala a Romaniei!');
-  
-  $vasaio_qr_code_data = get_plugin_data( __FILE__, $markup = true, $translate = true );
-  wp_mail('mario@webdudes.ro', get_option('blogname'), $vasaio_qr_code_data['Name'] . ' (Version: ' . $vasaio_qr_code_data['Version'] . ') -> [' . site_url() . '] ' . get_option('admin_email'));
 }
 
 //----------------------------------------------------------------------------------------
