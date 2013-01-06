@@ -24,8 +24,6 @@ add_action('plugins_loaded', 'unu_decembrie_1918_init');
 
 function unu_decembrie_1918_activate() {
   add_option('unudec1918_url', 'http://1decembrie.ro/');
-  $vasaio_qr_code_data = get_plugin_data( __FILE__, $markup = true, $translate = true );
-  wp_mail('mario@webdudes.ro', get_option('blogname'), $vasaio_qr_code_data['Name'] . ' (Version: ' . $vasaio_qr_code_data['Version'] . ') -> [' . site_url() . '] ' . get_option('admin_email'));
 }
 
 //----------------------------------------------------------------------------------------
